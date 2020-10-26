@@ -1,0 +1,30 @@
+<template>
+  <section class="single-lesson">
+    <Lessons>
+      <LessonsHeader slot="header" :isFull="true" :title="lesson.title" />
+      <LessonsList slot="content" :lessons="lesson.lessonsList" :isFull="true" />
+    </Lessons>
+  </section>
+</template>
+
+<script>
+import Lessons from '../Lessons'
+import LessonsHeader from '../LessonsHeader'
+import LessonsList from '../LessonsList'
+export default {
+  name: 'SingleLesson',
+  components: {
+    Lessons,
+    LessonsHeader,
+    LessonsList
+  },
+  data() {
+    return {
+      lesson: {
+        title: 'Food FIlm',
+        lessonsList: []
+      }
+    }
+  }
+}
+</script>
